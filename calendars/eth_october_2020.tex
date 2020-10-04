@@ -56,6 +56,8 @@
             \path[las] (ethoct-2020-10-14) --++(-10:9) node[entry] (la1) {\linalg{Serie 3}};
             \path[las] (ethoct-2020-10-21) --++(220:6) node[entry] (la2) {\linalg{Serie 4}};
             \path[las] (ethoct-2020-10-28) --++(150:8) node[entry] (la3) {\linalg{Serie 5}};
+
+            \path[its] (ethoct-2020-10-06) --++ (35:8) node [entry] (vit0) {\vit{Hangman}};
         \end{pgfonlayer}
 
         \begin{pgfonlayer}{bg}
@@ -74,6 +76,7 @@
             \foreach \lao/\ladate in {0/07, 1/14, 2/21, 3/28}{
                 \draw[connector, las] (ethoct-2020-10-\ladate) -- (la\lao);
             }
+            \draw[connector, its] (ethoct-2020-10-06) -- (vit0);
         \end{pgfonlayer}
         \begin{pgfonlayer}{l3}
             \foreach \io/\iodate in {tmVI0/20, dig3/15}{
