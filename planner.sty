@@ -1,0 +1,45 @@
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[left=1.5cm, right=1.5cm, bottom=2cm, top=2cm, landscape, a4paper]{geometry}
+\usepackage{lastpage}
+\usepackage{amssymb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{positioning, calc, fit, matrix, decorations, angles, fadings, patterns, quotes, babel, arrows.meta, calendar}
+
+% pgfplot layers
+\pgfplotsset{compat=1.7}                                                                % Version? für Plots  
+\pgfdeclarelayer{bg}
+\pgfdeclarelayer{l1}
+\pgfdeclarelayer{l2}
+\pgfdeclarelayer{l3}
+\pgfdeclarelayer{tl1}
+\pgfdeclarelayer{tl2}
+\pgfdeclarelayer{tl3}
+\pgfsetlayers{bg,l3,l2,l1,main,tl1,tl2,tl3}
+
+\definecolor{yellow}{HTML}{FED600}
+\definecolor{orange}{HTML}{ff9a00}
+
+\tikzset{
+    entry/.style = {draw, thick, fill = white},
+    important/.style = {draw, thick, red!70!black, fill = white},
+    vimportant/.style = {draw, thick, red!70!black, fill = red!20},
+    connector/.style = {draw, thick},
+    iconnector/.style = {draw, thick, red!70!black},
+    nuss/.style = {draw = blue},
+    tms/.style = {draw = green!40!black},
+    ans/.style = {draw = yellow},
+    digs/.style = {draw = orange},
+    las/.style = {draw = cyan!80!black}
+    }
+
+\newcommand{\todo}[2]{$\square$ \textcolor{black!60}{\textbf{#1}}: #2}
+\newcommand{\occ}[2]{\textcolor{black!60}{\textbf{#1}}: #2}
+\newcommand{\tm}[1]{\todo{TM}{#1}}
+\newcommand{\nus}[1]{\todo{NuS}{#1}}
+\newcommand{\an}[1]{\todo{Analysis}{#1}}
+\newcommand{\dig}[1]{\todo{DigiTech}{#1}}
+\newcommand{\linalg}[1]{\todo{LinAlg}{#1}}

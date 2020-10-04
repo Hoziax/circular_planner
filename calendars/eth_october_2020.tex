@@ -1,0 +1,83 @@
+\begin{center}
+    \newcount\mycount
+    \begin{tikzpicture} [every day/.style={anchor=mid}]
+        \node[] at (0,0) {Oktober 2020};
+        \calendar at (0,0) [dates=2020-10-01 to 2020-10-last, name=ethoct]
+            if (Sunday) [black!50!red]
+            if (all)
+            {
+                \mycount=1
+                \advance\mycount by -\pgfcalendarcurrentday \multiply\mycount by 11
+                \advance\mycount by 90 \pgftransformshift{\pgfpointpolar{\mycount}{30mm}}
+            }
+            if (Monday, Tuesday, Wednesday, Thursday, Friday) {\draw[thick] (0,0.04) circle (7pt);
+        };
+
+        \begin{pgfonlayer}{tl3}
+            \path[tms] (ethoct-2020-10-05) --++(45:4.5) node[entry] (tm0) {\tm{Skript S. 23-32}};
+            \path[tms] (ethoct-2020-10-11) --++(20:4.5) node[entry] (tm1) {\tm{Serie 3}};
+            \path[tms] (ethoct-2020-10-12) --++(-5:4.5) node[entry] (tm2) {\tm{Skript S. 33-40}};
+            \path[tms] (ethoct-2020-10-18) --++(315:2.5) node[entry] (tm3) {\tm{Serie 4}};
+            \path[tms] (ethoct-2020-10-19) --++(260:3.5) node[entry] (tm4) {\tm{Skript S. 41-46}};
+            \path[] (ethoct-2020-10-20) --++(250:4.7) node[vimportant] (tmVI0) {\occ{TM}{Klausur 1}};
+            \path[tms] (ethoct-2020-10-26) --++(200:4.5) node[entry] (tm5) {\tm{Skript S. 47-54}};
+
+            \path[nuss] (ethoct-2020-10-06) --++(38:4.5) node[entry] (nus0) {\nus{Albach 2.1 -2.9 lesen}};
+            \path[nuss] (ethoct-2020-10-06) --++(25:4.5) node[entry] (nus1) {\nus{Lesekontrolle}};
+            \path[nuss] (ethoct-2020-10-12) --++(10:4.5) node[entry] (nus2) {\nus{Aufgabe Pearson}};
+            \path[nuss] (ethoct-2020-10-13) --++(-10:4.5) node[entry] (nus3) {\nus{Albach lesen}};
+            \path[nuss] (ethoct-2020-10-13) --++(-20:4.5) node[entry] (nus4) {\nus{Lesekontrolle}};
+            \path[nuss] (ethoct-2020-10-19) --++(300:3) node[entry] (nus5) {\nus{Aufgabe Pearson}};
+            \path[nuss] (ethoct-2020-10-20) --++(220:4) node[entry] (nus6) {\nus{Albach lesen}};
+            \path[nuss] (ethoct-2020-10-20) --++(210:2.5) node[entry] (nus7) {\nus{Lesekontrolle}};
+            \path[nuss] (ethoct-2020-10-26) --++(190:4.5) node[entry] (nus8) {\nus{Aufgabe Pearson}};
+            \path[nuss] (ethoct-2020-10-27) --++(170:4.5) node[entry] (nus9) {\nus{Albach lesen}};
+            \path[nuss] (ethoct-2020-10-27) --++(160:4.5) node[entry] (nus10) {\nus{Lesekontrolle}};
+
+            \path[ans] (ethoct-2020-10-09) --++(13:4.5) node[important] (an0) {\an{Quiz}};
+            \path[ans] (ethoct-2020-10-16) --++(-30:4.5) node[important] (an1) {\an{Quiz}};
+            \path[ans] (ethoct-2020-10-23) --++(200:4.5) node[important] (an2) {\an{Quiz}};
+            \path[ans] (ethoct-2020-10-30) --++(100:4.5) node[important] (an3) {\an{Quiz}};
+            \path[ans] (ethoct-2020-10-01) --++(90:2.5) node[entry] (an4) {\an{Serie 2}};
+            \path[ans] (ethoct-2020-10-08) --++(20:6.5) node[entry] (an5) {\an{Serie 3}};
+            \path[ans] (ethoct-2020-10-15) --++(-20:5.5) node[entry] (an6) {\an{Serie 4}};
+            \path[ans] (ethoct-2020-10-22) --++(200:5.5) node[entry] (an7) {\an{Serie 5}};
+            \path[ans] (ethoct-2020-10-29) --++(110:4) node[entry] (an8) {\an{Serie 6}};
+            \path[ans] (ethoct-2020-10-09) --++(25:4) node[entry] (an9) {\an{Schnellübung}};
+            \path[ans] (ethoct-2020-10-23) --++(190:4) node[entry] (an10) {\an{Schnellübung}};
+
+            \path[digs] (ethoct-2020-10-07) --++(20:8) node[entry] (dig0) {\dig{Serie 2}};
+            \path[digs] (ethoct-2020-10-14) --++(-20:8.5) node[entry] (dig1) {\dig{Serie 3}};
+            \path[digs] (ethoct-2020-10-28) --++(140:8) node[entry] (dig2) {\dig{Serie 4}};
+            \path[digs] (ethoct-2020-10-15) --++(-25:8) node[vimportant] (dig3) {\dig{Test}};
+
+            \path[las] (ethoct-2020-10-07) --++(30:8) node[entry] (la0) {\linalg{Serie 2}};
+            \path[las] (ethoct-2020-10-14) --++(-10:9) node[entry] (la1) {\linalg{Serie 3}};
+            \path[las] (ethoct-2020-10-21) --++(220:6) node[entry] (la2) {\linalg{Serie 4}};
+            \path[las] (ethoct-2020-10-28) --++(150:8) node[entry] (la3) {\linalg{Serie 5}};
+        \end{pgfonlayer}
+
+        \begin{pgfonlayer}{bg}
+            \foreach \tmo/\tmdate in {0/05, 1/11, 2/12, 3/18, 4/19, 5/26}{
+                \draw[connector, tms] (ethoct-2020-10-\tmdate) -- (tm\tmo);
+            }
+            \foreach \nuso/\nusdate in {0/06, 1/06, 2/12, 3/13, 4/13, 5/19, 6/20, 7/20, 8/26, 9/27, 10/27}{
+                \draw[connector, nuss] (ethoct-2020-10-\nusdate) -- (nus\nuso);
+            }
+            \foreach \ano/\andate in {0/09, 1/16, 2/23, 3/30, 4/01, 5/08, 6/15, 7/22, 8/29, 9/09, 10/23}{
+                \draw[connector, ans] (ethoct-2020-10-\andate) -- (an\ano);
+            }
+            \foreach \digo/\digdate in {0/07, 1/14, 2/28}{
+                \draw[connector, digs] (ethoct-2020-10-\digdate) -- (dig\digo);
+            }
+            \foreach \lao/\ladate in {0/07, 1/14, 2/21, 3/28}{
+                \draw[connector, las] (ethoct-2020-10-\ladate) -- (la\lao);
+            }
+        \end{pgfonlayer}
+        \begin{pgfonlayer}{l3}
+            \foreach \io/\iodate in {tmVI0/20, dig3/15}{
+                \draw[iconnector] (ethoct-2020-10-\iodate) -- (\io);
+            }
+        \end{pgfonlayer}
+    \end{tikzpicture}
+\end{center}
