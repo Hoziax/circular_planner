@@ -10,8 +10,9 @@
                 \advance\mycount by -\pgfcalendarcurrentday \multiply\mycount by 11
                 \advance\mycount by 90 \pgftransformshift{\pgfpointpolar{\mycount}{30mm}}
             }
-            if (Monday, Tuesday, Wednesday, Thursday, Friday) {\draw[thick] (0,0.04) circle (7pt);
-        };
+            if (Monday, Tuesday, Wednesday, Thursday, Friday) {\draw[thick] (0,0.04) circle (7pt);}
+            if (equals = 2020-10-15, equals = 2020-10-20) {\draw[thick, fill = red!50] (0, 0.04) circle (7pt);}
+        ;
 
         \begin{pgfonlayer}{tl3}
             \path[tms] (ethoct-2020-10-05) --++(45:4.5) node[entry] (tm0) {\tm{Skript S. 23-32}};
