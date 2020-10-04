@@ -29,15 +29,15 @@
     vimportant/.style = {draw, thick, red!70!black, fill = red!20},
     connector/.style = {draw, thick},
     iconnector/.style = {draw, thick, red!70!black},
-    nuss/.style = {draw = blue},
-    tms/.style = {draw = green!40!black},
-    ans/.style = {draw = yellow},
-    digs/.style = {draw = orange},
-    las/.style = {draw = cyan!80!black}
+    nuss/.style = {blue},
+    tms/.style = {green!40!black},
+    ans/.style = {yellow},
+    digs/.style = {orange},
+    las/.style = {cyan!80!black}
     }
 
-\newcommand{\todo}[2]{$\square$ \textcolor{black!60}{\textbf{#1}}: #2}
-\newcommand{\occ}[2]{\textcolor{black!60}{\textbf{#1}}: #2}
+\newcommand{\todo}[2]{$\square$ \textcolor{black!60}{\textbf{#1}}: \textcolor{black}{#2}}
+\newcommand{\occ}[2]{\textcolor{black!60}{\textbf{#1}}: \textcolor{black}{#2}}
 \newcommand{\tm}[1]{\todo{TM}{#1}}
 \newcommand{\nus}[1]{\todo{NuS}{#1}}
 \newcommand{\an}[1]{\todo{Analysis}{#1}}
